@@ -1,4 +1,4 @@
-const notes = require('express').Router();
+// const notes = require('express').Router();
 const fs = require('fs')
 
 const data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
@@ -35,7 +35,7 @@ module.exports = function(app) {
     });
 
     
-    app.delete("/routes/notes/:id", function(req, res) {
+    app.delete("/api/notes/:id", function(req, res) {
 
         let noteId = req.params.id;
         let newId = 0;
